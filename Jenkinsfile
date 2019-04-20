@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 cleanWs()
+                checkout scm
                 sh 'make'
             }
         }
