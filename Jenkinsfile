@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 cleanWs()
                 checkout scm
-                sh 'make'
+                sh './gradlew clean build'
             }
         }
         stage('Test') {
