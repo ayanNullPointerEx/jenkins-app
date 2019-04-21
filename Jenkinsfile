@@ -1,3 +1,4 @@
+@Library('shared-pipeline-library')_
 pipeline {
     agent any
 
@@ -12,6 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+            sayHello 'Ayan'
                 echo 'Testing..'
             }
         }
